@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Devaland Marketing Agency</title>
+    <meta name="description" content="Learn how Devaland Marketing Agency collects, uses, and protects your personal data in accordance with privacy regulations.">
+    <meta name="keywords" content="privacy policy, data protection, GDPR compliance, Devaland Marketing">
+    
+    <style>
+        :root {
+            --primary: #673de6;
+            --primary-dark: #5025d1;
+            --primary-light: #ebe4ff;
+            --dark: #1d1e20;
+            --gray-dark: #36344d;
+            --gray: #727586;
+            --gray-light: #f2f3f6;
+            --light: #fff;
+            --success: #00b090;
+            --danger: #fc5185;
+            --warning: #ffcd35;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--light);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            height: 40px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 25px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        /* Privacy Policy Content */
+        .privacy-hero {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            color: var(--light);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .privacy-hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .privacy-hero p {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .privacy-content {
+            padding: 60px 0;
+            background-color: var(--light);
+        }
+        
+        .privacy-section {
+            margin-bottom: 50px;
+        }
+        
+        .privacy-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .privacy-section h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+        
+        .privacy-section h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+            font-size: 1.3rem;
+        }
+        
+        .privacy-section p, .privacy-section ul {
+            margin-bottom: 15px;
+            color: var(--gray-dark);
+        }
+        
+        .privacy-section ul {
+            padding-left: 20px;
+        }
+        
+        .privacy-section li {
+            margin-bottom: 8px;
+        }
+        
+        .highlight-box {
+            background-color: var(--gray-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .contact-info {
+            background-color: var(--primary-light);
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .contact-info h3 {
+            color: var(--primary-dark);
+            margin-bottom: 15px;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--light);
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--light);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: var(--gray-light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--light);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: var(--gray-light);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .privacy-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .privacy-hero {
+                padding: 60px 0;
+            }
+            
+            .privacy-content {
+                padding: 40px 0;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .privacy-hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .privacy-section h2 {
+                font-size: 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/">
+                <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=192,h=192,fit=crop,f=png/m2WQl6eb8DTyQ4lR/devaland-logo-mxB7lBx9PxfB7Dj6.jpg" alt="Devaland Logo" class="logo">
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about-us-devaland-marketing-agency">About</a></li>
+                    <li><a href="/business-automation-services">Services</a></li>
+                    <li><a href="/business-automation-blog">Blog</a></li>
+                    <li><a href="/contact-devaland-digital-marketing-agency">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Privacy Policy Hero -->
+    <section class="privacy-hero">
+        <div class="container">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: May 2024</p>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Content -->
+    <section class="privacy-content">
+        <div class="container">
+            <div class="privacy-section">
+                <h2>Introduction</h2>
+                <p>Devaland Marketing Agency website is owned by DEVALAND MARKETING SRL Company, which is a data controller of your personal data.</p>
+                <p>We have adopted this Privacy Policy, which determines how we process the information collected by Devaland Marketing Agency, and also provides the reasons why we must collect certain personal data about you. Therefore, you must read this Privacy Policy before using the Devaland Marketing Agency website.</p>
+                <p>We take care of your data and ensure it's confidential and secure.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>Information We Collect</h2>
+                <p>When you visit or log into our website, we use cookies and similar technologies to collect certain information about your visit. This includes:</p>
+                
+                <h3>1. Usage Data</h3>
+                <p>Information about how you use our site, such as pages visited, time spent on pages, and links clicked.</p>
+                
+                <h3>2. Device Information</h3>
+                <p>Details about the device you use to access our site, including IP address, browser type, and operating system.</p>
+                
+                <h3>3. Personal Data</h3>
+                <p>If you provide it, we may collect information such as your email address, phone number, or other contact details.</p>
+                
+                <div class="highlight-box">
+                    <p>We may combine this automatically collected information with other data we receive from third-party sources, such as data providers and marketing partners, to create a more complete profile of you. We then use this profile to communicate with you, including providing personalized advertising and promotional content based on your interests and browsing behavior. You may opt out of this at any time.</p>
+                </div>
+                
+                <p>Additionally, as you browse the Site, we collect information about the individual web pages or products you view, what websites or search terms referred you to the Site, and how you interact with the Site. We refer to this automatically collected information as "Device Information."</p>
+                
+                <p>Moreover, we might collect the personal data you provide to us (including but not limited to Name, Surname, Address, payment information, etc.) during registration to be able to fulfill the agreement.</p>
+                
+                <h3>Microsoft Clarity Partnership</h3>
+                <p>We partner with Microsoft Clarity and Microsoft Advertising to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to improve and market our products/services.</p>
+                <p>Website usage data is captured using first and third-party cookies and other tracking technologies to determine the popularity of products/services and online activity. Additionally, we use this information for site optimization, fraud/security purposes, and advertising.</p>
+                <p>For more information about how Microsoft collects and uses your data, visit the <a href="https://privacy.microsoft.com/" target="_blank">Microsoft Privacy Statement</a>.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>Why We Process Your Data</h2>
+                <p>Our top priority is customer data security, and, as such, we may process only minimal user data, as much as it is necessary to maintain the website. Information collected automatically is used only to identify potential cases of abuse and establish statistical information regarding website usage. This statistical information is not otherwise aggregated in such a way that it would identify any particular user of the system.</p>
+                
+                <p>You can visit the website without telling us who you are or revealing any information, by which someone could identify you as a specific, identifiable individual. If, however, you wish to use some of the website's features, or you wish to receive our newsletter or provide other details by filling out a form, you may provide personal data to us, such as your email, first name, last name, city of residence, organization, telephone number.</p>
+                
+                <div class="highlight-box">
+                    <p>You can choose not to provide us with your data, but then you may not be able to take advantage of some of the website's features. For example, you won't be able to receive our Newsletter or contact us directly from the website. Users who are uncertain about what information is mandatory are welcome to contact us via Email at <a href="mailto:office@devaland.com">office@devaland.com</a>.</p>
+                </div>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>Your Rights</h2>
+                <p>If you are a European resident, you have the following rights related to your data:</p>
+                
+                <ul>
+                    <li><strong>The right to be informed</strong> - You have the right to be informed about the collection and use of your personal data.</li>
+                    <li><strong>The right of access</strong> - You have the right to access your personal data.</li>
+                    <li><strong>The right to rectification</strong> - You have the right to have inaccurate personal data rectified.</li>
+                    <li><strong>The right to erasure</strong> - You have the right to have your personal data erased (the "right to be forgotten").</li>
+                    <li><strong>The right to restrict processing</strong> - You have the right to request the restriction or suppression of your personal data.</li>
+                    <li><strong>The right to data portability</strong> - You have the right to obtain and reuse your personal data for your own purposes across different services.</li>
+                    <li><strong>The right to object</strong> - You have the right to object to the processing of your personal data in certain circumstances.</li>
+                    <li><strong>Rights about automated decision-making and profiling</strong> - You have rights related to automated decision making including profiling.</li>
+                </ul>
+                
+                <p>If you would like to exercise any of these rights, please contact us through the contact information below.</p>
+                
+                <p>Additionally, if you are a European resident, we note that we are processing your information to fulfill contracts we might have with you (for example, if you make an order through the Site), or otherwise to pursue our legitimate business interests listed above. Additionally, please note that your information might be transferred outside of Europe, including Canada and the United States.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>Links to Other Websites</h2>
+                <p>Our website may contain links to other websites that may not be owned or controlled by us. Please be aware that we are not responsible for such other websites or third parties' privacy practices. We encourage you to be aware when you leave our website and read the privacy statements of each website that may collect personal information.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>Information Security</h2>
+                <p>We secure the information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use, or disclosure. We keep reasonable administrative, technical, and physical safeguards to protect against unauthorized access, use, modification, and personal data disclosure in its control and custody. However, no data transmission over the Internet or wireless network can be guaranteed.</p>
+            </div>
+            
+            <div class="privacy-section">
+                <h2>Legal Disclosure</h2>
+                <p>We will disclose any information we collect, use, or receive if required or permitted by law, such as to comply with a subpoena or similar legal process, and when we believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, investigate fraud, or respond to a government request.</p>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>If you would like to contact us to understand more about this Policy or wish to contact us concerning any matter relating to individual rights and your Personal Information, you may send an email to <a href="mailto:office@devaland.com">office@devaland.com</a>.</p>
+                <p>For general inquiries, you may also use the contact form on our <a href="/contact-devaland-digital-marketing-agency">Contact page</a>.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Devaland</h3>
+                    <p>Business Automation Agency specializing in high-ticket lead generation for B2B companies.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about-us-devaland-marketing-agency">About</a></li>
+                        <li><a href="/business-automation-services">Services</a></li>
+                        <li><a href="/business-automation-blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="/terms-and-conditions">Terms & Conditions</a></li>
+                        <li><a href="/cookies-policy">Cookies Policy</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Email: office@devaland.com</li>
+                        <li>Phone: +40-721-269-312</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Copyright © 2005-2025 - DEVALAND MARKETING S.R.L. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
