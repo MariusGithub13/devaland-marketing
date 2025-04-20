@@ -1,0 +1,70 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | {{ site.title }}</title>
+<meta name="description" content="{{ page.description || site.description }}">
+
+<!-- Favicon -->
+<link rel="icon" href="{{ site.favicon }}">
+
+<!-- Open Graph / Social Media Meta Tags -->
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title }} | {{ site.title }}">
+<meta property="og:description" content="{{ page.description || site.description }}">
+<meta property="og:image" content="{{ page.socialImage || site.socialImage }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
+<meta name="twitter:description" content="{{ page.description || site.description }}">
+<meta name="twitter:image" content="{{ page.socialImage || site.socialImage }}">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+<!-- Keywords -->
+<meta name="keywords" content="{{ site.keywords }}{% if page.keywords %}, {{ page.keywords }}{% endif %}">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Rubik:wght@400&family=Roboto:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- Schema.org markup for Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ site.title }}",
+  "url": "{{ site.url }}",
+  "logo": "{{ site.url }}",
+  "alternateName": "Devaland Digital Marketing Services",
+  "sameAs": [
+    "{{ site.socialLinks.facebook }}",
+    "https://www.pinterest.co.uk/freedomstar1313/",
+    "{{ site.socialLinks.instagram }}",
+    "{{ site.socialLinks.linkedin }}",
+    "{{ site.socialLinks.tiktok }}",
+    "https://devaland.medium.com/",
+    "https://www.youtube.com/@devaland13",
+    "https://www.tumblr.com/blog/devaland",
+    "https://me.dm/@devaland"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "{{ site.contact.phone }}",
+    "contactType": "sales",
+    "email": "{{ site.contact.email }}",
+    "areaServed": ["LU","CH","IE","NO","QA","SG","US","IS","DK","AU","SE","NL","AT","FI","DE","BE","CA","HK","AE","NZ","SM","BN","IL","JP","KR","KW","FR","UK","MT","IT","BH","SA","SI","ES","CY","CZ","EE","PT","TW","SK"],
+    "availableLanguage": ["en","es","fr","de","sa","pt","pl","it"]
+  }
+}
+</script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/components.css">
+{% if page.stylesheet %}
+<link rel="stylesheet" href="/assets/css/pages/{{ page.stylesheet }}">
+{% endif %}
