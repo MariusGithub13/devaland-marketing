@@ -32,7 +32,10 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700&family=Rubik:wght@400&family=Roboto:wght@400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Schema.org markup for Google -->
     <script type="application/ld+json">
@@ -67,21 +70,18 @@
     
     <style>
         :root {
-            --primary: #673de6;
-            --primary-dark: #5025d1;
-            --primary-light: #ebe4ff;
-            --dark: #1d1e20;
-            --gray-dark: #36344d;
-            --gray: #727586;
-            --gray-light: #f2f3f6;
-            --light: #fff;
-            --azure: #357df9;
-            --azure-light: #e3ebf9;
-            --azure-dark: #265ab2;
-            --indigo: #6366F1;
-            --success: #00b090;
-            --danger: #fc5185;
-            --warning: #ffcd35;
+            --primary: #5E3BEE;
+            --primary-dark: #4D2BC9;
+            --primary-light: #F5F3FF;
+            --dark: #1D1E20;
+            --gray-dark: #282938;
+            --gray: #5E5E6E;
+            --gray-light: #F4F6FC;
+            --light: #FFFFFF;
+            --accent: #E62872;
+            --success: #00B090;
+            --warning: #FFCD35;
+            --danger: #FC5185;
         }
         
         * {
@@ -91,10 +91,10 @@
         }
         
         body {
-            font-family: 'Lato', sans-serif;
+            font-family: 'Inter', sans-serif;
             color: var(--dark);
             line-height: 1.6;
-            background-color: #f8f9fa;
+            background-color: var(--light);
         }
         
         .container {
@@ -107,11 +107,11 @@
         /* Header Styles */
         header {
             background-color: var(--light);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         
         .header-container {
@@ -122,27 +122,39 @@
         }
         
         .logo {
-            height: 50px;
+            height: 40px;
         }
         
         nav ul {
             display: flex;
             list-style: none;
-        }
-        
-        nav ul li {
-            margin-left: 30px;
+            gap: 30px;
         }
         
         nav ul li a {
             text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
+            color: var(--gray-dark);
+            font-weight: 500;
+            font-size: 16px;
             transition: color 0.3s;
         }
         
         nav ul li a:hover {
             color: var(--primary);
+        }
+        
+        .nav-btn {
+            background-color: var(--primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 4px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .nav-btn:hover {
+            background-color: var(--primary-dark);
+            color: white;
         }
         
         .mobile-menu-btn {
@@ -151,54 +163,79 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
+            color: var(--dark);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
-            color: var(--light);
+            background-color: var(--primary-light);
             padding: 180px 0 100px;
-            text-align: center;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        
+        .hero-text {
+            flex: 1;
+        }
+        
+        .hero-image {
+            flex: 1;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
+            font-size: 48px;
+            font-weight: 700;
             line-height: 1.2;
+            margin-bottom: 24px;
+            color: var(--dark);
         }
         
         .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
+            font-size: 18px;
+            color: var(--gray);
+            margin-bottom: 32px;
+            max-width: 600px;
         }
         
         .btn {
             display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--light);
-            color: var(--primary);
-            border-radius: 30px;
+            padding: 16px 32px;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 500;
             transition: all 0.3s;
-            border: 2px solid var(--light);
+            border: 1px solid var(--primary);
+            font-size: 16px;
         }
         
         .btn:hover {
-            background-color: transparent;
-            color: var(--light);
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(94, 59, 238, 0.2);
         }
         
         .btn-outline {
             background-color: transparent;
-            color: var(--light);
-            margin-left: 15px;
+            color: var(--primary);
+            margin-left: 16px;
         }
         
         .btn-outline:hover {
-            background-color: var(--light);
-            color: var(--primary);
+            background-color: var(--primary);
+            color: var(--light);
+            box-shadow: 0 10px 20px rgba(94, 59, 238, 0.2);
         }
         
         /* Services Section */
@@ -213,46 +250,63 @@
         }
         
         .section-title h2 {
-            font-size: 2.5rem;
+            font-size: 36px;
+            font-weight: 700;
             color: var(--dark);
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
         
         .section-title p {
             color: var(--gray);
             max-width: 700px;
             margin: 0 auto;
+            font-size: 16px;
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 24px;
         }
         
         .service-card {
             background-color: var(--light);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            padding: 40px 32px;
+            border: 1px solid var(--primary-light);
+            transition: all 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            border-color: var(--primary);
         }
         
         .service-icon {
-            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
             color: var(--primary);
-            margin-bottom: 20px;
+            font-size: 24px;
         }
         
         .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
             color: var(--dark);
+        }
+        
+        .service-card p {
+            color: var(--gray);
+            font-size: 16px;
+            line-height: 1.6;
         }
         
         /* About Section */
@@ -264,14 +318,14 @@
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 60px;
             align-items: center;
         }
         
         .about-image {
-            border-radius: 10px;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
         }
         
         .about-image img {
@@ -281,14 +335,17 @@
         }
         
         .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
             color: var(--dark);
         }
         
         .about-text p {
             margin-bottom: 20px;
-            color: var(--gray-dark);
+            color: var(--gray);
+            font-size: 16px;
+            line-height: 1.6;
         }
         
         /* Testimonials */
@@ -300,20 +357,28 @@
         .testimonial-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 24px;
         }
         
         .testimonial-card {
             background-color: var(--light);
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            padding: 32px;
+            border: 1px solid var(--primary-light);
+            transition: all 0.3s;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
         
         .testimonial-text {
             font-style: italic;
-            margin-bottom: 20px;
+            margin-bottom: 24px;
             color: var(--gray-dark);
+            font-size: 16px;
+            line-height: 1.6;
         }
         
         .testimonial-author {
@@ -325,7 +390,7 @@
             width: 50px;
             height: 50px;
             border-radius: 50%;
-            margin-right: 15px;
+            margin-right: 16px;
             overflow: hidden;
         }
         
@@ -336,52 +401,97 @@
         }
         
         .author-info h4 {
-            font-size: 1.1rem;
-            margin-bottom: 5px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 4px;
         }
         
         .author-info p {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 14px;
+        }
+        
+        /* Awards Section */
+        .awards {
+            padding: 80px 0;
+            background-color: var(--gray-light);
+        }
+        
+        .awards-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .awards-logos {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .awards-logos img {
+            height: 80px;
+            width: auto;
         }
         
         /* CTA Section */
         .cta {
             padding: 100px 0;
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+            background-color: var(--primary);
             color: var(--light);
             text-align: center;
         }
         
         .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 24px;
         }
         
         .cta p {
             max-width: 700px;
             margin: 0 auto 40px;
-            font-size: 1.2rem;
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .cta .btn {
+            background-color: var(--light);
+            color: var(--primary);
+        }
+        
+        .cta .btn:hover {
+            background-color: var(--primary-light);
+            color: var(--primary);
         }
         
         /* Footer */
         footer {
             background-color: var(--dark);
             color: var(--light);
-            padding: 60px 0 20px;
+            padding: 80px 0 20px;
         }
         
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 40px;
-            margin-bottom: 40px;
+            margin-bottom: 60px;
         }
         
         .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 24px;
             color: var(--light);
+        }
+        
+        .footer-column p {
+            color: var(--gray-light);
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
         
         .footer-column ul {
@@ -389,27 +499,28 @@
         }
         
         .footer-column ul li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         
         .footer-column ul li a {
             color: var(--gray-light);
             text-decoration: none;
             transition: color 0.3s;
+            font-size: 14px;
         }
         
         .footer-column ul li a:hover {
-            color: var(--light);
+            color: var(--primary-light);
         }
         
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 16px;
         }
         
         .social-links a {
             color: var(--light);
-            font-size: 1.2rem;
+            font-size: 18px;
             transition: color 0.3s;
         }
         
@@ -419,10 +530,10 @@
         
         .footer-bottom {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 30px;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: var(--gray-light);
-            font-size: 0.9rem;
+            font-size: 14px;
         }
         
         /* Responsive Styles */
@@ -433,6 +544,19 @@
             
             .about-image {
                 order: -1;
+            }
+            
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                text-align: center;
+            }
+            
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
             }
         }
         
@@ -447,10 +571,10 @@
                 left: 0;
                 width: 100%;
                 background-color: var(--light);
-                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
                 padding: 20px;
                 transform: translateY(-150%);
                 transition: transform 0.3s;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             }
             
             nav.active {
@@ -459,34 +583,48 @@
             
             nav ul {
                 flex-direction: column;
+                gap: 15px;
             }
             
-            nav ul li {
-                margin: 10px 0;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
+            .nav-buttons {
+                margin-top: 20px;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
             }
             
             .btn-outline {
                 margin-left: 0;
-                margin-top: 15px;
-                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
             }
         }
         
         @media (max-width: 576px) {
             .hero h1 {
-                font-size: 2rem;
+                font-size: 28px;
             }
             
             .hero p {
-                font-size: 1rem;
+                font-size: 16px;
             }
             
             .section-title h2 {
-                font-size: 2rem;
+                font-size: 28px;
+            }
+            
+            .cta h2 {
+                font-size: 28px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -509,6 +647,9 @@
                     <li><a href="/business-automation-blog">Blog</a></li>
                     <li><a href="/contact-devaland-digital-marketing-agency">Contact</a></li>
                 </ul>
+                <div class="nav-buttons">
+                    <a href="/business-automation-services" class="nav-btn">Get Started</a>
+                </div>
             </nav>
         </div>
     </header>
@@ -516,11 +657,18 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Business Automation & High-Ticket Lead Generation</h1>
-            <p>We help B2B companies in the renewable energy industry and business consulting to get more high-ticket leads using our automated systems.</p>
-            <div>
-                <a href="/business-automation-services" class="btn">Explore Our Services</a>
-                <a href="https://calendly.com/devaland/30min" class="btn btn-outline">Book a Free Consultation</a>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Business Automation & High-Ticket Lead Generation</h1>
+                    <p>We help B2B companies in the renewable energy industry and business consulting to get more high-ticket leads using our automated systems.</p>
+                    <div>
+                        <a href="/business-automation-services" class="btn">Explore Our Services</a>
+                        <a href="https://calendly.com/devaland/30min" class="btn btn-outline">Book a Free Consultation</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop,f=jpeg/m2WQl6eb8DTyQ4lR/marius-digital-vampire-mxBZq2PDNzt6gbN1.jpg" alt="Business Automation">
+                </div>
             </div>
         </div>
     </section>
@@ -535,37 +683,49 @@
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
+                    <div class="service-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
                     <h3>Business Automation Services</h3>
                     <p>Our team utilizes cutting-edge tools like Make, Zapier, and AI to streamline your processes and generate fresh leads for your business.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">📈</div>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
                     <h3>Lead Generation for B2B</h3>
                     <p>We help you get more high-quality leads and automate your growth with targeted campaigns and smart automation.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">📱</div>
+                    <div class="service-icon">
+                        <i class="fas fa-hashtag"></i>
+                    </div>
                     <h3>Social Media Marketing</h3>
                     <p>We'll turn your brand into the life of the digital party with strategic social media management and advertising.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">✉️</div>
+                    <div class="service-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
                     <h3>Email Marketing Automation</h3>
                     <p>We use Klaviyo automation magic to grow your email marketing campaigns and nurture leads effectively.</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🖥️</div>
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
                     <h3>Website Design</h3>
                     <p>As WP Engine Agency Partners, we build super-fast, user-friendly websites that make visitors go "Wow!"</p>
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-icon">🔍</div>
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
                     <h3>SEO Optimization</h3>
                     <p>We make Google adore your site with in-depth SEO optimization and data-driven strategies.</p>
                 </div>
@@ -644,24 +804,24 @@
     </section>
 
     <!-- Awards Section -->
-    <section class="awards" style="padding: 60px 0; background-color: #f5f5f5;">
+    <section class="awards">
         <div class="container">
             <div class="section-title">
                 <h2>Our Recognitions</h2>
                 <p>We're proud of the recognition we've received for our work in digital marketing and automation.</p>
             </div>
             
-            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-                <p>We are pleased to announce that our company, Devaland Marketing SRL, won the <a href="https://stellarbusiness.com/devaland-marketing-srl/" target="_blank">Stellar Business Award</a> as the Top Marketing and Automation Agency in the USA, UK, and Australia.</p>
-                <p style="margin-top: 20px;">Also we are proud to announce that <strong><a href="https://nyweekly.com/tech/marius-andronie-founder-of-devaland-marketing-agency-driving-growth-in-high-tech-automation-marketing/" target="_blank">New York Weekly</a></strong> published an article about Marius Andronie, Founder of Devaland Marketing Agency: <a href="https://nyweekly.com/tech/marius-andronie-founder-of-devaland-marketing-agency-driving-growth-in-high-tech-automation-marketing/" target="_blank">Driving Growth in High-Tech Automation Marketing</a></p>
+            <div class="awards-content">
+                <p>We are pleased to announce that our company, Devaland Marketing SRL, won the <a href="https://stellarbusiness.com/devaland-marketing-srl/" target="_blank" style="color: var(--primary);">Stellar Business Award</a> as the Top Marketing and Automation Agency in the USA, UK, and Australia.</p>
+                <p style="margin-top: 20px;">Also we are proud to announce that <strong><a href="https://nyweekly.com/tech/marius-andronie-founder-of-devaland-marketing-agency-driving-growth-in-high-tech-automation-marketing/" target="_blank" style="color: var(--primary);">New York Weekly</a></strong> published an article about Marius Andronie, Founder of Devaland Marketing Agency: <a href="https://nyweekly.com/tech/marius-andronie-founder-of-devaland-marketing-agency-driving-growth-in-high-tech-automation-marketing/" target="_blank" style="color: var(--primary);">Driving Growth in High-Tech Automation Marketing</a></p>
             </div>
             
-            <div style="display: flex; justify-content: center; gap: 40px; margin-top: 40px; flex-wrap: wrap;">
+            <div class="awards-logos">
                 <a href="https://wpengine.com/agency-directory/" target="_blank">
-                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=192,h=192,fit=crop,f=png/m2WQl6eb8DTyQ4lR/wp-engine-agency-partner-program-member-badge-m5KL1vbGKLuLaboJ.png" alt="WP Engine Agency Partner" style="height: 100px; width: auto;">
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=192,h=192,fit=crop,f=png/m2WQl6eb8DTyQ4lR/wp-engine-agency-partner-program-member-badge-m5KL1vbGKLuLaboJ.png" alt="WP Engine Agency Partner">
                 </a>
                 <a href="https://connect.klaviyo.com/" target="_blank">
-                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=192,h=192,fit=crop,f=png/m2WQl6eb8DTyQ4lR/klaviyo-partner-badge-light-ALp74JWvJgCjxGnj.png" alt="Klaviyo Agency Partner" style="height: 100px; width: auto;">
+                    <img src="https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=192,h=192,fit=crop,f=png/m2WQl6eb8DTyQ4lR/klaviyo-partner-badge-light-ALp74JWvJgCjxGnj.png" alt="Klaviyo Agency Partner">
                 </a>
             </div>
         </div>
@@ -683,11 +843,11 @@
                 <div class="footer-column">
                     <h3>Devaland</h3>
                     <p>Business Automation Agency specializing in high-ticket lead generation for B2B companies.</p>
-                    <div class="social-links" style="margin-top: 20px;">
-                        <a href="https://www.facebook.com/Devaland13" target="_blank">Fb</a>
-                        <a href="https://www.instagram.com/devaland13" target="_blank">Ig</a>
-                        <a href="https://www.linkedin.com/in/marius-andronie/" target="_blank">Li</a>
-                        <a href="https://www.tiktok.com/@devaland13" target="_blank">Tt</a>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Devaland13" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/devaland13" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/marius-andronie/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.tiktok.com/@devaland13" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 
@@ -773,45 +933,35 @@
                 }
             });
         });
-        
-        // Add shadow to header on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-            } else {
-                header.style.boxShadow = 'none';
-            }
-        });
     </script>
 
     <div id="cookie-consent-banner" style="display: none; position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 20px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); z-index: 1000;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
-        <p style="flex: 1; min-width: 300px;">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="/cookies-policy.html" style="color: #4f46e5;">Learn more</a></p>
-        <div style="display: flex; gap: 10px;">
-            <button id="accept-cookies" style="padding: 10px 20px; background: #4f46e5; color: white; border: none; border-radius: 5px; cursor: pointer;">Accept</button>
-            <button id="reject-cookies" style="padding: 10px 20px; background: transparent; color: #4f46e5; border: 1px solid #4f46e5; border-radius: 5px; cursor: pointer;">Reject</button>
+        <div class="container" style="max-width: 1200px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 15px; align-items: center;">
+            <p style="flex: 1; min-width: 300px;">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies. <a href="/cookies-policy.html" style="color: var(--primary);">Learn more</a></p>
+            <div style="display: flex; gap: 10px;">
+                <button id="accept-cookies" style="padding: 10px 20px; background: var(--primary); color: white; border: none; border-radius: 4px; cursor: pointer;">Accept</button>
+                <button id="reject-cookies" style="padding: 10px 20px; background: transparent; color: var(--primary); border: 1px solid var(--primary); border-radius: 4px; cursor: pointer;">Reject</button>
+            </div>
         </div>
     </div>
-</div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        if (!localStorage.getItem('cookiesAccepted')) {
-            document.getElementById('cookie-consent-banner').style.display = 'block';
-        }
-        
-        document.getElementById('accept-cookies').addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'true');
-            document.getElementById('cookie-consent-banner').style.display = 'none';
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-consent-banner').style.display = 'block';
+            }
+            
+            document.getElementById('accept-cookies').addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                document.getElementById('cookie-consent-banner').style.display = 'none';
+            });
+            
+            document.getElementById('reject-cookies').addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                document.getElementById('cookie-consent-banner').style.display = 'none';
+                // Here you would typically also block non-essential cookies
+            });
         });
-        
-        document.getElementById('reject-cookies').addEventListener('click', function() {
-            localStorage.setItem('cookiesAccepted', 'false');
-            document.getElementById('cookie-consent-banner').style.display = 'none';
-            // Here you would typically also block non-essential cookies
-        });
-    });
-</script>
+    </script>
 </body>
 </html>
