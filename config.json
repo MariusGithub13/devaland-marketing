@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "Devaland: Business Automation Agency",
+    "description": "Devaland is a business automation agency specializing in high-ticket lead generation campaigns for B2B companies, particularly in the solar industry and business consulting.",
+    "url": "https://www.devaland.com/",
+    "favicon": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=192,h=192,fit=crop,f=png/m2WQl6eb8DTyQ4lR/devaland-logo-mxB7lBx9PxfB7Dj6.jpg",
+    "socialImage": "https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=1200,h=630,fit=crop,f=jpeg/m2WQl6eb8DTyQ4lR/marius-digital-vampire-mxBZq2PDNzt6gbN1.jpg",
+    "keywords": "business automation, lead generation, solar industry, digital marketing, B2B marketing",
+    "socialLinks": {
+      "facebook": "https://www.facebook.com/Devaland13",
+      "instagram": "https://www.instagram.com/devaland13",
+      "linkedin": "https://www.linkedin.com/in/marius-andronie/",
+      "tiktok": "https://www.tiktok.com/@devaland13"
+    },
+    "contact": {
+      "email": "office@devaland.com",
+      "phone": "+40-721-269-312",
+      "address": "Santandrei 13, Simeria, HD 335903, Romania"
+    }
+  }
+}
