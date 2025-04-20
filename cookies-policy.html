@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Policy | Devaland Marketing</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #94a3b8;
+            --gray-light: #e2e8f0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: white;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--primary);
+        }
+        
+        .cookies-hero {
+            background-color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cookies-hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+        
+        .cookies-hero p {
+            font-size: 18px;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cookies-content {
+            padding: 80px 0;
+        }
+        
+        .cookies-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .cookies-card h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 28px;
+        }
+        
+        .cookies-card p {
+            margin-bottom: 20px;
+        }
+        
+        .cookies-types {
+            margin-top: 40px;
+        }
+        
+        .cookie-type {
+            background-color: var(--gray-light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .cookie-type h3 {
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+        
+        .cookie-type.required {
+            border-left-color: var(--secondary);
+        }
+        
+        .cookie-type.required h3 {
+            color: var(--secondary);
+        }
+        
+        .cookie-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 16px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--gray-light);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col a {
+            color: var(--gray);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray);
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            .cookies-hero h1 {
+                font-size: 32px;
+            }
+            
+            .cookies-card {
+                padding: 30px 20px;
+            }
+            
+            .cookie-actions {
+                justify-content: center;
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="https://devaland-marketing.netlify.app/" class="logo">Devaland<span>Marketing</span></a>
+            <nav>
+                <ul>
+                    <li><a href="https://devaland-marketing.netlify.app/">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="cookies-hero">
+        <div class="container">
+            <h1>Cookies Policy</h1>
+            <p>Learn about our use of cookies to enhance your browsing experience on our website.</p>
+        </div>
+    </section>
+    
+    <section class="cookies-content">
+        <div class="container">
+            <div class="cookies-card">
+                <h2>Our Use of Cookies</h2>
+                <p>This website uses cookies and similar technologies to collect information about your visit for marketing purposes and to enhance your experience. By clicking 'Accept,' you consent to our use of these technologies. You can opt-out at any time through our privacy policy.</p>
+                
+                <p>A cookie is a text file that is placed on your hard disk by a web page server. Cookies cannot be used to run programs or deliver viruses to your computer. Cookies are uniquely assigned to you and can only be read by a web server in the domain that issued the cookie to you.</p>
+                
+                <p>We may use cookies to collect, store, and track information for statistical or marketing purposes to operate our website.</p>
+                
+                <div class="cookies-types">
+                    <div class="cookie-type">
+                        <h3>Optional Cookies</h3>
+                        <p>These cookies enhance your experience but are not essential for the website to function. They may be used for analytics, personalization, or advertising purposes. You can accept or decline these cookies.</p>
+                    </div>
+                    
+                    <div class="cookie-type required">
+                        <h3>Required Cookies</h3>
+                        <p>These cookies are necessary for the operation of our website and do not require your consent as they always work. Please keep in mind that by accepting required Cookies, you also accept third-party Cookies, which might be used via third-party provided services if you use such services on our website, for example, a video display window provided by third parties and integrated into our website.</p>
+                    </div>
+                </div>
+                
+                <div class="cookie-actions">
+                    <button class="btn btn-primary">Accept All Cookies</button>
+                    <button class="btn btn-outline">Manage Preferences</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Devaland Marketing</h3>
+                    <p>Your partner in digital growth and online success. We provide cutting-edge marketing solutions tailored to your business needs.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://devaland-marketing.netlify.app/">Home</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li>Email: info@devaland.com</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Address: 123 Marketing St, Digital City</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Devaland Marketing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
